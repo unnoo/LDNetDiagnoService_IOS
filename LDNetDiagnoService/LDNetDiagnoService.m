@@ -30,9 +30,7 @@ static NSString *const kCheckOutIPURL = @"";
     NSString *_MobileCountryCode;
     NSString *_MobileNetCode;
 
-    NETWORK_TYPE _curNetType;
     NSString *_localIp;
-    NSString *_gatewayIp;
     NSArray *_dnsServers;
     NSArray *_hostAddress;
 
@@ -95,17 +93,6 @@ static NSString *const kCheckOutIPURL = @"";
     [self recordStepInfo:@"开始诊断..."];
     [self recordCurrentAppVersion];
     [self recordLocalNetEnvironment];
-
-    //未联网不进行任何检测
-    if (_curNetType == 0) {
-        _isRunning = NO;
-        [self recordStepInfo:@"\n当前主机未联网，请检查网络！"];
-        [self recordStepInfo:@"\n网络诊断结束\n"];
-        if (self.delegate && [self.delegate respondsToSelector:@selector(netDiagnosisDidEnd:)]) {
-            [self.delegate netDiagnosisDidEnd:_logInfo];
-        }
-        return;
-    }
 
     if (_isRunning) {
 //        [self recordOutIPInfo];
@@ -245,31 +232,10 @@ static NSString *const kCheckOutIPURL = @"";
 - (void)recordLocalNetEnvironment
 {
     [self recordStepInfo:[NSString stringWithFormat:@"\n\n诊断域名 %@...\n", _dormain]];
-    //判断是否联网以及获取网络类型
-    NSArray *typeArr = [NSArray arrayWithObjects:@"2G", @"3G", @"4G", @"5G", @"wifi", nil];
-    _curNetType = [LDNetGetAddress getNetworkTypeFromStatusBar];
-    if (_curNetType == 0) {
-        [self recordStepInfo:[NSString stringWithFormat:@"当前是否联网: 未联网"]];
-    } else {
-        [self recordStepInfo:[NSString stringWithFormat:@"当前是否联网: 已联网"]];
-        if (_curNetType > 0 && _curNetType < 6) {
-            [self
-                recordStepInfo:[NSString stringWithFormat:@"当前联网类型: %@",
-                                                          [typeArr objectAtIndex:_curNetType - 1]]];
-        }
-    }
 
     //本地ip信息
     _localIp = [LDNetGetAddress deviceIPAdress];
     [self recordStepInfo:[NSString stringWithFormat:@"当前本机IP: %@", _localIp]];
-
-    if (_curNetType == NETWORK_TYPE_WIFI) {
-        _gatewayIp = [LDNetGetAddress getGatewayIPAddress];
-        [self recordStepInfo:[NSString stringWithFormat:@"本地网关: %@", _gatewayIp]];
-    } else {
-        _gatewayIp = @"";
-    }
-
 
     _dnsServers = [NSArray arrayWithArray:[LDNetGetAddress outPutDNSServers]];
     [self recordStepInfo:[NSString stringWithFormat:@"本地DNS: %@",
@@ -331,10 +297,7 @@ static NSString *const kCheckOutIPURL = @"";
         [pingInfo addObject:@"本机"];
         [pingAdd addObject:_localIp];
         [pingInfo addObject:@"本机IP"];
-        if (_gatewayIp && ![_gatewayIp isEqualToString:@""]) {
-            [pingAdd addObject:_gatewayIp];
-            [pingInfo addObject:@"本地网关"];
-        }
+
         if ([_dnsServers count] > 0) {
             [pingAdd addObject:[_dnsServers objectAtIndex:0]];
             [pingInfo addObject:@"DNS服务器"];

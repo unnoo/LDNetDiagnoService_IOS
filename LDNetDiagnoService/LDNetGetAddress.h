@@ -44,12 +44,6 @@ typedef enum {
  */
 + (NSArray *)outPutDNSServers;
 
-
-/*!
- * 获取当前网络类型
- */
-+ (NETWORK_TYPE)getNetworkTypeFromStatusBar;
-
 /**
  * 格式化IPV6地址
  */

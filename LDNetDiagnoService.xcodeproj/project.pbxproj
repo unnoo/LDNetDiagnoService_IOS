@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FD36772D8BEE1D004B8024 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FD36762D8BEE1D004B8024 /* libresolv.tbd */; };
+		15FD36792D8BEE24004B8024 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FD36782D8BEE24004B8024 /* CoreTelephony.framework */; };
+		15FD367B2D8BEF99004B8024 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FD367A2D8BEF99004B8024 /* libresolv.tbd */; };
+		15FD367D2D8BEF9F004B8024 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FD367C2D8BEF9F004B8024 /* CoreTelephony.framework */; };
 		2942AC941CEC3C650028B3C7 /* libLDNetDiagnoService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942AC8A1CEC3C650028B3C7 /* libLDNetDiagnoService.framework */; };
 		2942AC9B1CEC3C650028B3C7 /* libLDNetDiagnoServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2942AC9A1CEC3C650028B3C7 /* libLDNetDiagnoServiceTests.m */; };
 		2942AC9F1CEC3C650028B3C7 /* libLDNetDiagnoService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942AC8A1CEC3C650028B3C7 /* libLDNetDiagnoService.framework */; };
@@ -25,12 +29,10 @@
 		2942ACB41CEC3CD40028B3C7 /* LDSimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 629AF7131A012630001CBB3E /* LDSimplePing.h */; };
 		2942ACB51CEC3CD40028B3C7 /* LDNetGetAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 507D0B181B71F08300C022DD /* LDNetGetAddress.h */; };
 		2942ACB61CEC3CD40028B3C7 /* Route.h in Headers */ = {isa = PBXBuildFile; fileRef = 620760621B74C27C00761E87 /* Route.h */; };
-		50C40A001B736B6D00C0D877 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C409FF1B736B6D00C0D877 /* libresolv.dylib */; };
 		623DA6B61A0723C4002351F7 /* LDNetDiagnoService.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 623DA6B51A0723C4002351F7 /* LDNetDiagnoService.podspec */; };
 		629AF6F21A0125E5001CBB3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629AF6F11A0125E5001CBB3E /* Images.xcassets */; };
 		629AF6F51A0125E5001CBB3E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629AF6F31A0125E5001CBB3E /* LaunchScreen.xib */; };
 		629AF7011A0125E5001CBB3E /* LDNetDiagnoServiceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AF7001A0125E5001CBB3E /* LDNetDiagnoServiceDemoTests.m */; };
-		629AF71B1A012644001CBB3E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629AF71A1A012644001CBB3E /* CoreTelephony.framework */; };
 		B0535F411CF2E9F100A1E7D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AF6E91A0125E5001CBB3E /* AppDelegate.m */; };
 		B0535F421CF2E9F100A1E7D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AF6EC1A0125E5001CBB3E /* ViewController.m */; };
 		B0535F431CF2E9F100A1E7D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AF6E61A0125E5001CBB3E /* main.m */; };
@@ -82,6 +84,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15FD36762D8BEE1D004B8024 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/libresolv.tbd; sourceTree = DEVELOPER_DIR; };
+		15FD36782D8BEE24004B8024 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		15FD367A2D8BEF99004B8024 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		15FD367C2D8BEF9F004B8024 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		2942AC8A1CEC3C650028B3C7 /* libLDNetDiagnoService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libLDNetDiagnoService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2942AC8E1CEC3C650028B3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2942AC931CEC3C650028B3C7 /* libLDNetDiagnoServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libLDNetDiagnoServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +97,6 @@
 		507D0B191B71F08300C022DD /* LDNetGetAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNetGetAddress.m; sourceTree = "<group>"; };
 		507D0B1B1B71FE1900C022DD /* LDNetConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDNetConnect.h; sourceTree = "<group>"; };
 		507D0B1C1B71FE1900C022DD /* LDNetConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNetConnect.m; sourceTree = "<group>"; };
-		50C409FF1B736B6D00C0D877 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		620760621B74C27C00761E87 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		623DA6B51A0723C4002351F7 /* LDNetDiagnoService.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LDNetDiagnoService.podspec; sourceTree = "<group>"; };
 		629AF6E11A0125E5001CBB3E /* LDNetDiagnoServiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LDNetDiagnoServiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +121,6 @@
 		629AF7121A012630001CBB3E /* LDNetTraceRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNetTraceRoute.m; sourceTree = "<group>"; };
 		629AF7131A012630001CBB3E /* LDSimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDSimplePing.h; sourceTree = "<group>"; };
 		629AF7141A012630001CBB3E /* LDSimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDSimplePing.m; sourceTree = "<group>"; };
-		629AF71A1A012644001CBB3E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		B0535F8C1CF2F07800A1E7D6 /* libLDNetDiagnoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libLDNetDiagnoService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15FD36792D8BEE24004B8024 /* CoreTelephony.framework in Frameworks */,
+				15FD36772D8BEE1D004B8024 /* libresolv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C40A001B736B6D00C0D877 /* libresolv.dylib in Frameworks */,
-				629AF71B1A012644001CBB3E /* CoreTelephony.framework in Frameworks */,
+				15FD367D2D8BEF9F004B8024 /* CoreTelephony.framework in Frameworks */,
+				15FD367B2D8BEF99004B8024 /* libresolv.tbd in Frameworks */,
 				2942AC9F1CEC3C650028B3C7 /* libLDNetDiagnoService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +162,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15FD36752D8BEE1D004B8024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FD367C2D8BEF9F004B8024 /* CoreTelephony.framework */,
+				15FD367A2D8BEF99004B8024 /* libresolv.tbd */,
+				15FD36782D8BEE24004B8024 /* CoreTelephony.framework */,
+				15FD36762D8BEE1D004B8024 /* libresolv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2942AC8B1CEC3C650028B3C7 /* libLDNetDiagnoService */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,14 +194,13 @@
 		629AF6D81A0125E5001CBB3E = {
 			isa = PBXGroup;
 			children = (
-				50C409FF1B736B6D00C0D877 /* libresolv.dylib */,
 				623DA6B51A0723C4002351F7 /* LDNetDiagnoService.podspec */,
-				629AF71A1A012644001CBB3E /* CoreTelephony.framework */,
 				629AF70A1A012630001CBB3E /* LDNetDiagnoService */,
 				629AF6E31A0125E5001CBB3E /* LDNetDiagnoServiceDemo */,
 				629AF6FD1A0125E5001CBB3E /* LDNetDiagnoServiceDemoTests */,
 				2942AC8B1CEC3C650028B3C7 /* libLDNetDiagnoService */,
 				2942AC991CEC3C650028B3C7 /* libLDNetDiagnoServiceTests */,
+				15FD36752D8BEE1D004B8024 /* Frameworks */,
 				629AF6E21A0125E5001CBB3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -377,7 +393,7 @@
 					};
 					629AF6E01A0125E5001CBB3E = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 35B2KE884X;
+						DevelopmentTeam = BHSXZMPSGB;
 					};
 					629AF6F91A0125E5001CBB3E = {
 						CreatedOnToolsVersion = 6.1;
@@ -391,6 +407,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -535,7 +552,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = libLDNetDiagnoService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.netease.libLDNetDiagnoService;
@@ -562,7 +578,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = libLDNetDiagnoService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.netease.libLDNetDiagnoService;
@@ -581,7 +596,6 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = libLDNetDiagnoServiceTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.netease.libLDNetDiagnoServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,7 +611,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = libLDNetDiagnoServiceTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.netease.libLDNetDiagnoServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -641,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -678,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -693,8 +706,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Haiyang Zhang (4PCBVV7GWH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BHSXZMPSGB;
 				INFOPLIST_FILE = LDNetDiagnoServiceDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,8 +722,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Haiyang Zhang (4PCBVV7GWH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BHSXZMPSGB;
 				INFOPLIST_FILE = LDNetDiagnoServiceDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
