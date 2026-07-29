@@ -79,7 +79,8 @@
     destination = (struct sockaddr *)[addrData bytes];
 
     //初始化套接口
-    struct sockaddr fromAddr;
+    // 用 sockaddr_storage 容纳 IPv6 地址（sockaddr 仅 16 字节，装不下 28 字节的 sockaddr_in6）
+    struct sockaddr_storage fromAddr;
     int recv_sock;
     int send_sock;
     Boolean error = false;
@@ -106,7 +107,6 @@
 
 
     char *cmsg = "GET / HTTP/1.1\r\n\r\n";
-    socklen_t n = sizeof(fromAddr);
     char buf[100];
 
     int ttl = 1;  // index sur le TTL en cours de traitement.
@@ -158,6 +158,8 @@
             select(recv_sock + 1, &readfds, NULL, NULL, &tv);
             if (FD_ISSET(recv_sock, &readfds) > 0) {
                 timeoutTTL = 0;
+                // recvfrom 的地址长度是值-结果参数，内核会将其改写为实际地址长度，每次调用前必须重置
+                socklen_t n = sizeof(fromAddr);
                 if ((res = recvfrom(recv_sock, buf, 100, 0, (struct sockaddr *)&fromAddr, &n)) <
                     0) {
                     error = true;
@@ -167,13 +169,13 @@
                     delta = [LDNetTimer computeDurationSince:startTime];
 
                     //将“二进制整数” －> “点分十进制，获取hostAddress和hostName
-                    if (fromAddr.sa_family == AF_INET) {
+                    if (fromAddr.ss_family == AF_INET) {
                         char display[INET_ADDRSTRLEN] = {0};
                         inet_ntop(AF_INET, &((struct sockaddr_in *)&fromAddr)->sin_addr.s_addr, display, sizeof(display));
                         hostAddress = [NSString stringWithFormat:@"%s", display];
                     }
                     
-                    else if (fromAddr.sa_family == AF_INET6) {
+                    else if (fromAddr.ss_family == AF_INET6) {
                         char ip[INET6_ADDRSTRLEN];
                         inet_ntop(AF_INET6, &((struct sockaddr_in6 *)&fromAddr)->sin6_addr, ip, INET6_ADDRSTRLEN);
                         hostAddress = [NSString stringWithUTF8String:ip];
